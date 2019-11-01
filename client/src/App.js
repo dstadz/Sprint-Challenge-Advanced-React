@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import PlayerList from './components/PlayerList'
+import Nav from './components/Nav'
+import {useDarkMode} from './hooks/useDarkMode'
 
 import './App.css';
 
@@ -8,8 +10,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      players: [],
-      dark: false
+      players: []
     };
   
   console.log(this.state)
@@ -31,21 +32,11 @@ class App extends React.Component {
 
 
   render() {
-      const toggleDark = e => {
-    e.preventDefault();
-    console.log(this.state.dark)
-    this.setState({
-      players: this.state.players,
-      dark: !this.state.dark
-    });
-  };
-
     return (
       <div className='App'>
         <h2>Welcome to your player App!</h2>
-        <button
-          onClick={toggleDark}
-        >Dark Mode?</button>
+        <Nav />
+        
         <PlayerList 
           players={this.state.players}
         />
