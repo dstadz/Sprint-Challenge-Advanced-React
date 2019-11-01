@@ -10,7 +10,6 @@ class PlayerList extends React.Component {
         <h2>PlayerList</h2>
         <div>
           
-          {JSON.stringify(this.props.players[0])}
           {this.props.players.map(player =>
             <Player 
             key= {player.id}

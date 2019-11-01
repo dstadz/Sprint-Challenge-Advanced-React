@@ -1,16 +1,18 @@
 import React from 'react'
+//import styled from 'styled-components'
 
 class Player extends React.Component {
 
   render() {
-    console.log(this.props)
     return(
       <div>
         <h2>{this.props.name}</h2>
-        <div>
-          {}
+        <p>{this.props.country}</p>
+        <p>{this.props.searches}</p>
+        
           
-        </div>
+          
+        
       
       </div>
     )
